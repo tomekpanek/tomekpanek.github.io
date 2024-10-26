@@ -1,1 +1,20 @@
-welcome 2024.04.21
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Current Date</title>
+    <script>
+        function displayDate() {
+            const today = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = today.toLocaleDateString('pl-PL', options);
+
+            document.getElementById("currentDate").textContent = formattedDate;
+        }
+
+        window.onload = displayDate;
+    </script>
+</head>
+<body>
+    <p id="currentDate"></p>
+</body>
+</html>
